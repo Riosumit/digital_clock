@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        setInterval(getime,1000);
+        function getime(){
+            let t = new Date();
+            let time = t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds();
+            let date = t.toLocaleDateString();
+            document.getElementById("time").innerHTML = time + " on " + date;
+        }
+    </script>
+    <style>
+        body{
+            background-color: white;
+        }
+        .navtop{
+            background-color: rgb(24, 135, 221);
+            border-radius: 25px;
+            height: 50px;
+        }
+        .navtop li{
+            float: left;
+            list-style: none;
+            margin-top: 5px;
+        }
+        .navtop li a{
+            text-decoration: none;
+        }
+        .navtop ul{
+            overflow: auto;
+        }
+        .nav_button{
+            background: transparent;
+            color: black;
+            border: transparent;
+            font-size: 30px;
+            font-style: bold;;
+            padding: 10px 0px 0px 0px;
+        }
+        .home{
+            padding: 2px 5px 2px 10px;
+            height: 27px;
+            width: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navtop">
+        <ul>
+            <li><a href="project1.html" class="nav_button"><img src="home.jpg" alt="Home" class="home"></a></li>
+            <li><a href="project1.html" class="nav_button">Home | </a></li>
+            <li><a href="project1.html" class="nav_button"><img src="about.jpg" alt="Home" class="home"></a></li>
+            <li><a href="project1.html" class="nav_button">About | </a></li>
+            <li><a href="project1.html" class="nav_button"><img src="service.jpg" alt="Home" class="home"></a></li>
+            <li><a href="project1.html" class="nav_button">Service | </a></li>
+            <li><a href="project1.html" class="nav_button"><img src="contact_us.jpg" alt="Home" class="home"></a></li>
+            <li><a href="project1.html" class="nav_button">Contact Us | </a></li>
+        </ul>
+    </nav>
+    <div class="clock">
+        <h1 class="curtime">Current time is: <span id="time"></span></h1>
+
+    </div>
+</body>
+</html>
